@@ -11,11 +11,11 @@ fruits = [
 
 
 @app.route('/fruits')
-def get_incomes():
+def get_fruits():
     return jsonify(fruits)
 
 
 @app.route('/fruits', methods=['POST'])
-def add_income():
+def add_fruit():
     fruits.append(request.get_json())
     return '', 204
